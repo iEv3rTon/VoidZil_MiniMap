@@ -1,0 +1,156 @@
+{
+  "Orion_Avatar": {
+    "name": "avatardiscord_zone.png",
+    "x": 1869,
+    "y": 2648,
+    "width": 75,
+    "height": 75
+   },
+  "ContryB_Imp": {
+    "name": "contryball_br.png",
+    "x": 2171,
+    "y": 2687,
+    "width": 263,
+    "height": 252
+   },
+  "NovaBR": {
+    "name": "FlagZonenova.png",
+    "x": 2153,
+    "y": 3105,
+    "width": 1943,
+    "height": 991
+   },
+  "Trio": {
+    "name": "Trio.png",
+    "x": 2171,
+    "y": 2687,
+    "width": 584,
+    "height": 252
+     },
+  "flamain": {
+    "name": "flamain.png",
+    "x": 2027,
+    "y": 2366,
+    "width": 456,
+    "height": 218
+         },
+  "flazone3": {
+    "name": "flazone3.png",
+    "x": 2205,
+    "y": 2438,
+    "width": 188,
+    "height": 99
+         },
+  "flazone1": {
+    "name": "flazone1.png",
+    "x": 2205,
+    "y": 2293,
+    "width": 299,
+    "height": 145
+           },
+  "zone_board": {
+    "name": "zone_board.png",
+    "x": -409,
+    "y": 707,
+    "width": 267,
+    "height": 293
+             },
+  "flazone4": {
+    "name": "flazone4.png",
+    "x": 2497,
+    "y": 2436,
+    "width": 108,
+    "height": 124
+               },
+  "flazone_camisas2": {
+    "name": "flazone_camisas2.png",
+    "x": 1938,
+    "y": 2266,
+    "width": 268,
+    "height": 100
+                 },
+  "ancapzone": {
+    "name": "ancapzone.png",
+    "x": -119,
+    "y": -1853,
+    "width": 800,
+    "height": 404
+                   },
+  "SistemaS": {
+    "name": "SistemaS.PNG",
+    "x": 729,
+    "y": -3430,
+    "width": 510,
+    "height": 248
+                     },
+  "GREB": {
+    "name": "GREB.png",
+    "x": 3083,
+    "y": 2636,
+    "width": 197,
+    "height": 188
+                       },
+  "PoliciaS": {
+    "name": "PoliciaS.png",
+    "x": 3415,
+    "y": 2057,
+    "width": 128,
+    "height": 128
+                         },
+  "CorinthiansMain1": {
+    "name": "CorinthiansMain1.png",
+    "x": -3414,
+    "y": 128,
+    "width": 150,
+    "height": 113
+                           },
+  "CorinthiansMain2": {
+    "name": "CorinthiansMain2.png",
+    "x": -3686,
+    "y": 128,
+    "width": 272,
+    "height": 76
+                             },
+  "fla": {
+    "name": "fla.png",
+    "x": 1865,
+    "y": 2365,
+    "width": 162,
+    "height": 217
+                               },
+  "Anarchy": {
+    "name": "Anarchy.png",
+    "x": 3268,
+    "y": 2790,
+    "width": 160,
+    "height": 81
+                                 },
+  "wrldmp": {
+    "name": "wrldmp.png",
+    "x": -273,
+    "y": 1728,
+    "width": 400,
+    "height": 187
+                                   },
+  "fla2": {
+    "name": "fla2.png",
+    "x": 1883,
+    "y": 2368,
+    "width": 144,
+    "height": 89
+                                     },
+  "fronteira1": {
+    "name": "fronteira1.png",
+    "x": 2950,
+    "y": 2659,
+    "width": 101,
+    "height": 66
+                                       },
+  "Anarchy2": {
+    "name": "Anarchy2.png",
+    "x": 3238,
+    "y": 2796,
+    "width": 29,
+    "height": 17
+   }
+}
