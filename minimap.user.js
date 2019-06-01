@@ -51,23 +51,26 @@ window.addEventListener('load', function () {
     needed_templates = null;
     //Cachebreaker to force refresh
     cachebreaker = null;
-
+    
     var div = document.createElement('div');
     div.setAttribute('class', 'post block bc2');
-    div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 1em; bottom: 1em;">' +
-        '<div class="posy" id="posyt" style="background-size: 97%; background-image: url(https://imgur.com/SHRlegl); color: rgb(250, 250, 250); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 21px; padding: 6px;">' +
+    div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 0.6em; bottom: 0.6em; z-index: 2;">' +
+        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
         '<div id="minimap-text" style="display: none;"></div>' +
-        '<div id="minimap-box" style="position: relative;width:420px;height:300px">' +
+        '<div id="minimap-box" style="position: relative;width:400px;height:300px">' +
         '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
         '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
         '</div><div id="minimap-config" style="line-height:20px;">' +
-        '<span id="hide-map" style="cursor:pointer;">Esconder' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;"Seguir mouse' +
-        '</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">+</span>  /  ' +
-        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">-</span>' +
+        '<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-br"></i> | <span id="hide-map" style="cursor:pointer;color:white">𝑴𝒊𝒏𝒊𝒎𝒊𝒛𝒂𝒓' +
+        '</span> | <span id="follow-mouse" style="cursor:pointer;">𝑺𝒆𝒈𝒖𝒊𝒓 𝒐 𝒎𝒐𝒖𝒔𝒆' +
+        '</span> | 𝒁𝒐𝒐𝒎: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
+        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +
+        ' | <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> <i class="em em-flag-br"></i><br />' + vers +
         '</div>' +
         '</div>';
+  
+   
     document.body.appendChild(div);
     minimap = document.getElementById("minimap");
     minimap_board = document.getElementById("minimap-board");
