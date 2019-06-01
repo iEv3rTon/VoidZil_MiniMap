@@ -21,6 +21,14 @@
     "y": 2525,
     "width": 108,
     "height": 100
+            },
+   
+   "MonstroZil": {
+    "name": "monstro.png",
+    "x": 25,
+    "y": 2692,
+    "width": 54,
+    "height": 54
             }
    
   }
