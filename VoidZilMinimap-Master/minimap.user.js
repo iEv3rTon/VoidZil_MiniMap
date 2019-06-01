@@ -18,7 +18,7 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 var range = 25;
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/Ev3rtonAllakbar/VoidZil_MiniMap/edit/master/';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/Ev3rtonAllakbar/VoidZil_MiniMap/master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
