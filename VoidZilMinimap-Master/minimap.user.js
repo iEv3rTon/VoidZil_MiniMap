@@ -1,16 +1,17 @@
-// ==UserScript==
-// @name         yOriowm Minimap
-// @namespace    http://tampermonkey.net/
-// @version      2.0
-// @description  VoidZil_MiniMap
-// @author       yOriowm#1046
-// @match        https://pixelzone.io/*
-// @match        http://pixelzone.io/*
-// @homepage     https://github.com/yOriowm/ODNMinimap/
-// @updateURL    https://raw.githubusercontent.com/yOriowm/OrionMinimap/master/minimap.user.js
-// @downloadURL  https://raw.githubusercontent.com/yOriowm/OrionMinimap/master/minimap.user.js
-// @grant        none
-// ==/UserScript==
+// == UserScript ==
+// @name VoidZil MiniMap
+// @namespace http://tampermonkey.net/
+// @version 1.0
+// @description VoidZil MiniMap
+// @author yOriowm # 2260 editado por Ev3rTon Allakbar # 0938
+// @ match https://pixelzone.io/*
+// @match http://pixelzone.io/*
+// @homepage https://github.com/Ev3rtonAllakbar/VoidZil_MiniMap/
+// @updateURL https://raw.githubusercontent.com/Ev3rtonAllakbar/VoidZil_MiniMap/master/VoidZilMinimap-Master/minimap.user.js
+// @downloadURL https://raw.githubusercontent.com/Ev3rtonAllakbar/VoidZil_MiniMap/master/VoidZilMinimap-Master/minimap.user.js
+// @grant none
+// == / UserScript ==
+
 
 Number.prototype.between = function(a, b) {
   var min = Math.min.apply(Math, [a, b]),
@@ -18,7 +19,7 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 var range = 25;
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/yOriowm/OrionMinimap/master/';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/Ev3rtonAllakbar/VoidZil_MiniMap/master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
