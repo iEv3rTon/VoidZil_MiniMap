@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         yOriowm Minimap
+// @name         VoidZil MiniMap
 // @namespace    http://tampermonkey.net/
-// @version      2.0
-// @description  yOriowm Minimap
-// @author       yOriowm#1046
+// @version      1.0
+// @description  VoidZil MiniMap
+// @author       yOriowm#2260 editado por Ev3rTon Allakbar#0938 
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
-// @homepage     https://github.com/yOriowm/ODNMinimap/
-// @updateURL    https://raw.githubusercontent.com/yOriowm/OrionMinimap/master/minimap.user.js
-// @downloadURL  https://raw.githubusercontent.com/yOriowm/OrionMinimap/master/minimap.user.js
+// @homepage     https://github.com/Ev3rtonAllakbar/VoidZil_MiniMap/
+// @updateURL    https://raw.githubusercontent.com/Ev3rtonAllakbar/VoidZil_MiniMap/master/VoidZilMinimap-Master/minimap.user.js
+// @downloadURL  https://raw.githubusercontent.com/Ev3rtonAllakbar/VoidZil_MiniMap/master/VoidZilMinimap-Master/minimap.user.js
 // @grant        none
 // ==/UserScript==
 
@@ -18,7 +18,7 @@ Number.prototype.between = function(a, b) {
   return this > min && this < max;
 };
 var range = 25;
-window.baseTepmlateUrl = 'https://raw.githubusercontent.com/yOriowm/OrionMinimap/master/';
+window.baseTepmlateUrl = 'https://raw.githubusercontent.com/Ev3rtonAllakbar/VoidZil_MiniMap/edit/master/VoidZilMinimap-Master/';
 
 window.addEventListener('load', function () {
     //Regular Expression to get coordinates out of URL
@@ -179,7 +179,7 @@ function updateloop() {
     console.log("Updating Template List");
     // Get JSON of available templates
     var xmlhttp = new XMLHttpRequest();
-    var url = window.baseTepmlateUrl + "templates/data.json?" + new Date().getTime();
+    var url = window.baseTepmlateUrl + "Coords/data.json?" + new Date().getTime();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             template_list = JSON.parse(this.responseText);
