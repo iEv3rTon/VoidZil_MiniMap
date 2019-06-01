@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         VoidZil MiniMap
 // @namespace    http://tampermonkey.net/
-// @version      2.0
-// @description  VoidZil_MiniMap
-// @author       yOriowm#1046
+// @version      1.0
+// @description  VoidZil Discord.io/voidzil
+// @author       VoidZil
 // @match        https://pixelzone.io/*
 // @match        http://pixelzone.io/*
 // @homepage     https://github.com/Ev3rtonAllakbar/VoidZil_MiniMap/
