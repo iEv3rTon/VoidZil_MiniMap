@@ -1,0 +1,40 @@
+{
+  "ContryB_Imp": {
+    "name": "contryball_br.png",
+    "x": 2171,
+    "y": 2687,
+    "width": 263,
+    "height": 252
+   },
+  "NovaBR": {
+    "name": "FlagZonenova.png",
+    "x": 2153,
+    "y": 3105,
+    "width": 1943,
+    "height": 991
+   },
+  "Trio": {
+    "name": "Trio.png",
+    "x": 2171,
+    "y": 2687,
+    "width": 584,
+    "height": 252
+     },
+  "ancapzone": {
+    "name": "ancapzone.png",
+    "x": -119,
+    "y": -1853,
+    "width": 800,
+    "height": 404
+                   },
+  
+  "VoidZil" : {
+    "name" : "BrVd.png" ,
+    "x" : 220 ,
+    "y" : 2540 ,
+    "largura" : 707 ,
+    "altura" : 421
+               }
+  
+  
+  }
