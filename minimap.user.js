@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         VoidZil MiniMap
+// @name         ♛ VoidZil MiniMap ♛
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  VoidZil Discord.io/voidzil
