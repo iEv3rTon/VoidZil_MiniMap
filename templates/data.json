@@ -29,6 +29,14 @@
     "y": 2692,
     "width": 54,
     "height": 54
-            }
-   
+            }   ,
+    
+   "Everton&Young": {
+    "name": "duo.png",
+    "x": -315,
+    "y": 2788,
+    "width": 126,
+    "height": 200
+            }  
+    
   }
