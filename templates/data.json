@@ -14,6 +14,13 @@
     "y": 2788,
     "width": 200,
     "height": 126
-            }  
+            }  ,
     
+    "AncapSulFull": {
+    "name": "ancapsul.png",
+    "x": -4096,
+    "y": 2370,
+    "width": 487,
+    "height": 432
+            }  
   }
