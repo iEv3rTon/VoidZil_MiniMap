@@ -15,12 +15,11 @@
     "width": 200,
     "height": 126
             }  ,
-    
-    "AncapSulFull": {
-    "name": "ancapsul.png",
+   "AncapFull": {
+    "name": "ancap.png",
     "x": -4096,
     "y": 2370,
-    "width": 487,
-    "height": 432
-            }  
+    "width": 847,
+    "height": 515
+            } ,
   }
