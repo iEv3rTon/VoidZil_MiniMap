@@ -7,7 +7,6 @@
    "height": 727
             }   ,
    
-    
    "Everton&Young": {
     "name": "duo.png",
     "x": -324,
@@ -22,5 +21,13 @@
     "y": 2370,
     "width": 846,
     "height": 527
+            },
+    
+    "BrasãoVoid": {
+   "name": "novobrasao",
+   "x": 730,
+   "y": 2363,
+   "width": 139,
+   "height": 177
             } 
   }
