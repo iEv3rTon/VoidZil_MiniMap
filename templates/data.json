@@ -38,14 +38,14 @@
    "width": 477,
    "height": 279
             } ,
-      
-      "Lenda": {
-   "name": "artdobilly2.png",
-   "x": -389,
-   "y": 2454,
-   "width": 265,
-   "height": 306
-            } ,
+   
+      " Lenda " : {
+   " name " : " artdobilly2.png " ,
+   " x " : -389 ,
+   " y " : 2454 ,
+   " largura " : 306 ,
+   " altura " : 265
+            },
       
       "BrasãoVoid": {
    "name": "novobrasao.png",
