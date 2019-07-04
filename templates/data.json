@@ -1,11 +1,11 @@
 {     
       
       "VoidZilFull": { 
-   "name": "voidzilfull3.png" ,
+   "name": "full.png", 
    "x": -398,
-   "y": 2363,
-   "width": 1708,
-   "height": 649
+   "y": 2285,
+   "width": 1433,
+   "height": 727
             },
  
       "AncapFull": { 
