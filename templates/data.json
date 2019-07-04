@@ -1,10 +1,10 @@
-{   
-      " VoidZilFull " : {
-   " name " : " full.png " ,
+{    
+      "VoidZilFull" : {
+   " name " : "full.png" ,
    " x " : -398 ,
    " y " : 2363 ,
    " largura " : 1708 ,
-   " altura " : 649  
+   " altura " : 649
             },
   
       "AncapFull": { 
