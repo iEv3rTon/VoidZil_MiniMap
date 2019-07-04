@@ -1,12 +1,13 @@
-{    
-      "VoidZilFull" : {
-   " name " : "full.png" ,
-   " x " : -398 ,
-   " y " : 2363 , 
-   " largura " : 649 , 
-   " altura " : 1708
+{     
+      
+      "VoidZilFull": { 
+   "name": "full.png",
+   "x": -398,
+   "y": 2363,
+   "width": 1708,
+   "height": 649
             },
-  
+ 
       "AncapFull": { 
    "name": "ancapsul.png",
    "x": -4096,
