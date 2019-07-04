@@ -1,20 +1,12 @@
 {   
-      "voidZilFull": {
-   "name": "full.png",
-   "x": -123,
-   "y": 2285,
-   "width": 1433,
-   "height": 727
-            }   ,
-   
-      "Everton&Young": {
-   "name": "duo.png",
-   "x": -324,
-   "y": 2788,
-   "width": 200,
-   "height": 126
-            }  ,
-    
+      " VoidZilFull " : {
+   " name " : " full.png " ,
+   " x " : -399 ,
+   " y " : 2363 ,
+   " largura " : 649 ,
+   " altura " : 1708
+            },
+  
       "AncapFull": { 
    "name": "ancapsul.png",
    "x": -4096,
@@ -38,20 +30,5 @@
    "width": 477,
    "height": 279
             } ,
-   
-      " Lenda " : {
-   " name " : " artdobilly2.png " ,
-   " x " : -389 ,
-   " y " : 2454 ,
-   " largura " : 306 ,
-   " altura " : 265
-            },
-      
-      "BrasãoVoid": {
-   "name": "novobrasao.png",
-   "x": 730,
-   "y": 2363,
-   "width": 139,
-   "height": 177
-            } 
+  
   }
