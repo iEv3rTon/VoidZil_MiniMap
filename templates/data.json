@@ -31,7 +31,14 @@
    "width": 171,
    "height": 133
             } ,
- 
+      "BaseDaBahia": {
+   "name": "flagBAfull.png",
+   "x": 2514,
+   "y": 2191,
+   "width": 396,
+   "height": 222
+            }, 
+      
       "AttackZone": {
    "name": "young.png",
    "x": 318,
