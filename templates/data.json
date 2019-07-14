@@ -16,12 +16,12 @@
    "height": 649
             },
  
-      "AncapFull": { 
-   "name": "ancapsul.png",
+       "AncapFull": { 
+   "name": "ancap.png",
    "x": -4096,
-   "y": 2370,
-   "width": 846,
-   "height": 527
+   "y": 1950,
+   "width": 861,
+   "height": 957
             },
  
       "Quadro": {
