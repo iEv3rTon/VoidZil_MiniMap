@@ -16,12 +16,12 @@
    "height": 649
             },
  
-       "AncapFull": { 
-   "name": "ancap.png",
-   "x": -4096,
-   "y": 1950,
-   "width": 861,
-   "height": 957
+      " AncapFull " : {
+   " name " : " areaancap.png " ,
+   " x " : -4096 ,
+   " y " : 1963 ,
+   " largura " : 861 ,
+   " altura " : 944
             },
  
       "Quadro": {
