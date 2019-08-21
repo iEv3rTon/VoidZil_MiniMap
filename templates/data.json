@@ -30,6 +30,13 @@
    "width": 147,
    "height": 261
             },
+      "abcl": { 
+   "name": "fim.png", 
+   "x": 224,
+   "y": 774,
+   "width": 168,
+   "height": 224
+            },
  
       "Quadro": {
    "name": "quadro.png",
