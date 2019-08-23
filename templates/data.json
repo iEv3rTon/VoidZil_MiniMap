@@ -37,7 +37,13 @@
    "width": 195,
    "height": 262
             },
- 
+      "Bonsai": {
+   "name": "bonsai.png", 
+   "x": 579, 
+   "y": -1243, 
+   "width": 102, 
+   "height": 125 
+           },
       "Quadro": {
    "name": "quadro.png",
    "x": 808,
