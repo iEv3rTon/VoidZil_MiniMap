@@ -2,11 +2,9 @@
       
       "VoidZilFull": { 
    "name": "full.png", 
-   "x": -398,
-   "y": 2363,
-   "width": 1707,
-   "height": 649
-            },
+   "x": -398, "y": 2363,
+   "width": 1707, "height": 649
+    },
             
       "VoidZilFull2": {
    "name": "full2.png", 
