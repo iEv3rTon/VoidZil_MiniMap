@@ -1,0 +1,65 @@
+{ "comment": "",   
+      
+      "VoidZilFull": { 
+   "name": "full.png", 
+   "x": -398, "y": 2363,
+   "width": 1707, "height": 649
+    },
+            
+      "VoidZilFull2": {
+   "name": "full2.png", 
+   "x": -398,
+   "y": 2363,
+   "width": 275,
+   "height": 649
+            },
+ 
+       "ancapbase": {
+   "name": "ancapbase.png", 
+   "x": -4096,
+   "y": 1897,
+   "width": 861,
+   "height": 997
+            },
+            
+          "luluvdz": { 
+   "name": "lulu.png", 
+   "x": -126,
+   "y": 2649,
+   "width
+   "
+            },
+            
+      "Bonsai
+   "name": "bonsai.png", 
+   "x": 579, 
+   "y": -1243, 
+   "width": 102, 
+   "height": 125 
+           },
+           
+      "Quadro": {
+   "name": "quadro.png",
+   "x": 808,
+   "y": -1250,
+   "width": 171,
+   "height": 133
+            },
+            
+      "BaseDaBahia": {
+   "name": "flagBAfull.png",
+   "x": 2514,
+   "y": 2191,
+   "width": 396,
+   "height": 222
+            },
+            
+      "AttackZone": {
+   "name": "young.png",
+   "x": 318,
+   "y": 3035,
+   "width": 476,
+   "height": 337
+            } 
+  
+  }
