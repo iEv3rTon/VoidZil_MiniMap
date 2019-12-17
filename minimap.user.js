@@ -70,20 +70,21 @@ window.addEventListener('load', function() {
 
   var div = document.createElement('div');
   div.setAttribute('class', 'post block bc2');
-  div.innerHTML = '<div id="minimapbg" style="position: absolute; right: 0.6em; bottom: 0.6em; z-index: 2;">' +
-        '<div class="posy" id="posyt" style="background-size: 100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 12px; padding: 10px;">' +
-        '<div id="minimap-text" style="display: none;"></div>' +
-        '<div id="minimap-box" style="position: relative;width:400px;height:300px">' +
-        '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
-        '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
-        '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
-        '</div><div id="minimap-config" style="line-height:20px;">' +
-        '<span id="hide-map" style="cursor:pointer;">Esconder' +
-        '</span> | <span id="follow-mouse" style="cursor:pointer;">𝑺𝒆𝒈𝒖𝒊𝒓 𝒐 𝒎𝒐𝒖𝒔𝒆' +
-        '</span> | 𝒁𝒐𝒐𝒎: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
-        '<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +
-        '</div>' +
-        '</div>';
+   div.innerHTML = '<style>.grecaptcha-badge,#message{display: none;}</style>\n' +
+    '<div id="minimapbg" style="background-color:rgba(0,0,0,0.60); border-radius:0px; position:absolute; right:3px; bottom:3px; z-index:1;">' +
+    '<div class="posy" id="posyt" style="background-size: 100%; color: rgb(255, 255, 255); text-align: center; line-height: 42px; vertical-align: middle; width: auto; height: auto; border-radius: 10px; padding: 1px 1px;">' +
+    '<div id="minimap-text"></div>' +
+    '<div id="minimap-box" style="position: relative;width:450px;height:250px;">' +
+    '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
+    '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
+    '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
+    '</div><div id="minimap-config" style="line-height:15px;padding:3px;background-color:rgba(0,0,0,0.75);">' +
+    '	<span id="hide-map" style="cursor:pointer;">Hide' +
+    '	</span> | <span id="follow-mouse" style="cursor:pointer;">Follow mouse' +
+    '	</span> | <span id="toggle-grid" style="cursor:pointer;">Toggle grid' +
+    '	</span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
+    '	<span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +
+    '</div>' +
   document.body.appendChild(div);
   minimap = document.getElementById("minimap");
   minimap_board = document.getElementById("minimap-board");
