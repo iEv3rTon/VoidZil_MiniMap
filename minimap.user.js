@@ -13,16 +13,15 @@
 
 var baseTemplateUrl = 'https://raw.githubusercontent.com/Ev3rTonAllakbar/VoidZil_MiniMap/master/images/';
 var vers = "VoiZil Minimap";
-var range = 50
+var range = 6; //margin for showing the map window
 
 var x, y, zoomlevel, zooming_out, zooming_in, zoom_time, x_window, y_window, coorDOM, gameWindow;
-var toggle_show, toggle_follow, toggle_grid, counter, image_list, needed_templates, mousemoved;
+var toggle_show, toggle_follow, counter, image_list, needed_templates, mousemoved;
 var minimap, minimap_board, minimap_cursor, minimap_box, minimap_text;
 var ctx_minimap, ctx_minimap_board, ctx_minimap_cursor;
 //Regular Expression to get coordinates out of URL
 var re_url = /\?p=([-\d]+),([-\d]+)/;
 var timerDiv;
-var playercountNode, bumpSpan;
 
 Number.prototype.between = function(a, b) {
   var min = Math.min.apply(Math, [a, b]);
@@ -44,7 +43,7 @@ function startup() {
   baseTemplateUrl = t;
 
   console.log(vers+". TemplateUrl", baseTemplateUrl);
-  console.log("Try: listTemplates() and keys space, QWERTYUIOP[ ASDFG, X");
+  console.log("Try: listTemplates() and keys H, QWERTYUIOP[ ASDFG, X");
   gameWindow = document.getElementById("canvas");
   //DOM element of the displayed X, Y
   coorDOM = document.getElementById("coordinatesNote");
@@ -71,19 +70,19 @@ function startup() {
   var div = document.createElement('div');
   div.setAttribute('class', 'post block bc2');
   div.innerHTML = '<style>.grecaptcha-badge,#message{display: none}.palette-footer{z-index:5}</style>\n' +
-    '<div id="minimapbg" style="background-color:rgba(0,0,0,0.60); border-radius:0px; position:absolute; right:3px; bottom:3px; z-index:1;">' +
-    '<div class="posy unselectable" id="posyt" style="background-size:100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align:center; line-height:32px; vertical-align:middle; width:auto; height:auto; padding:1px 1px;">' +
+    '<div id="minimapbg" style="background-color:rgba(0,0,0,0.2); border-radius:12px; position:absolute; right:6px; bottom:6px; z-index:1;">' +
+    '<div class="posy unselectable" id="posyt" style="background-size:100%; background-image: url(https://i.imgur.com/2qu5Wch.png); color: rgb(255, 255, 255); text-align:center; line-height:32px; vertical-align:middle; width:auto; height:auto; padding:6px 8px;">' +
     '<div id="minimap-text"></div>' +
-    '<div id="minimap-box" style="position: relative;width:450px;height:250px">' +
+    '<div id="minimap-title" style="line-height: 15px; font-size: 0.9em;">' + vers + '</div>' +
+    '<div id="minimap-box" style="position: relative;width:390px;height:280px">' +
     '<canvas id="minimap" style="width: 100%; height: 100%;z-index:1;position:absolute;top:0;left:0;"></canvas>' +
     '<canvas id="minimap-board" style="width: 100%; height: 100%;z-index:2;position:absolute;top:0;left:0;"></canvas>' +
     '<canvas id="minimap-cursor" style="width: 100%; height: 100%;z-index:3;position:absolute;top:0;left:0;"></canvas>' +
-    '</div><div id="minimap-config" style="line-height:15px;padding:3px;background-color:rgba(0,0,0,0.75);">' +
+    '</div><div id="minimap-config" style="line-height:15px;">' +
     ' <span id="hide-map" style="cursor:pointer;">Esconder' +
     ' </span> | <span id="follow-mouse" style="cursor:pointer;">Seguir Mouse' +
-    '	</span> | <span id="toggle-grid" style="cursor:pointer;">Grid' +
-    ' </span> | 𝒁𝒐𝒐𝒎: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">▲</span>' +
-    ' <span id="zoom-minus" style="cursor:pointer;font-weight:bold;">▼</span>' +
+    ' </span> | Zoom: <span id="zoom-plus" style="cursor:pointer;font-weight:bold;">&nbsp;+&nbsp;</span>/' +
+    ' <span id="zoom-minus" style="cursor:pointer;font-weight:bold;">&nbsp;-&nbsp;</span>' +
     '</div>' +
     '</div>';
   document.body.appendChild(div);
@@ -104,15 +103,6 @@ function startup() {
   minimap_box = document.getElementById("minimap-box");
   minimap_text = document.getElementById("minimap-text");
 
-  playercountNode = document.getElementById("playerCounterNote");
-  if(playercountNode) {
-    playercountNode = playercountNode.childNodes[0].childNodes[0].childNodes[0];
-    bumpSpan = document.createElement('span');
-    bumpSpan.setAttribute('style', 'font-size:60%;margin-left:5px');
-    playercountNode.parentElement.parentElement.appendChild(bumpSpan);
-    setInterval(checkAlive, 1000);
-  }
-
   //No Antialiasing when scaling!
   ctx_minimap.mozImageSmoothingEnabled = false;
   ctx_minimap.webkitImageSmoothingEnabled = false;
@@ -132,10 +122,6 @@ function startup() {
   };
   minimap_text.onclick = function () {
     toggleShow(true);
-  };
-  document.getElementById("toggle-grid").onclick = function(){
-    toggle_grid = !toggle_grid;
-    drawBoard();
   };
   document.getElementById("follow-mouse").onclick = function () {
     toggle_follow = !toggle_follow;
@@ -196,16 +182,6 @@ function mymousemove(evt) {
   }
 }
 
-function checkAlive() {
-  if(playercountNode.nodeValue.substr(0,1) != " ") {
-    playercountNode.nodeValue = " "+playercountNode.nodeValue;
-    playercountNode.bump = Date.now();
-    bumpSpan.innerText = 0;
-  } else {
-    bumpSpan.innerText = Math.floor((Date.now() - playercountNode.bump)/1000);
-  }
-}
-
 window.listTemplates = function () {
   var ttlpx = 0;
   var mdstr = "";
@@ -260,10 +236,8 @@ function toggleShow(newValue) {
     loadTemplates();
   } else {
     minimap_box.style.display = "none";
-    minimap_text.innerHTML = "Mostrar minimapa";
+    minimap_text.innerHTML = "Mostrar Mapa";
     minimap_text.style.display = "block";
-    minimap_text.style.padding = "5px 3px";
-    document.getElementById("minimap-text").style.backgroundcolor = "rgba(0,0,0,0.75)";
     minimap_text.style.cursor = "pointer";
     document.getElementById("minimap-config").style.display = "none";
   }
@@ -330,13 +304,13 @@ function loadTemplates() {
   }
   if (needed_templates.length == 0) {
     if (zooming_in == false && zooming_out == false) {
-      minimap_box.style.opacity = "0.10";
-      document.getElementById("minimap-config").style.opacity = "0.10";
+      minimap_box.style.display = "none";
+      minimap_text.style.display = "block";
+      minimap_text.innerHTML = "No templates here";
       minimap_text.style.cursor = "auto";
     }
   } else {
-    minimap_box.style.opacity = "1";
-    document.getElementById("minimap-config").style.opacity = "1";
+    minimap_box.style.display = "block";
     minimap_text.style.display = "none";
     counter = 0;
     for (i = 0; i < needed_templates.length; i++) {
@@ -383,7 +357,7 @@ function drawTemplates() {
 
 function drawBoard() {
   ctx_minimap_board.clearRect(0, 0, minimap_board.width, minimap_board.height);
-  if (zoomlevel <= 4.6 || toggle_grid) return;
+  if (zoomlevel <= 4.6) return;
   ctx_minimap_board.beginPath();
   var bw = minimap_board.width + zoomlevel;
   var bh = minimap_board.height + zoomlevel;
@@ -415,7 +389,7 @@ function drawCursor() {
 
   ctx_minimap_cursor.beginPath();
   ctx_minimap_cursor.lineWidth = zoomlevel / 6;
-  ctx_minimap_cursor.strokeStyle = "orange"
+  ctx_minimap_cursor.strokeStyle = "#ff1b1b";
   ctx_minimap_cursor.rect(zoomlevel * xoff_c, zoomlevel * yoff_c, zoomlevel, zoomlevel);
   ctx_minimap_cursor.stroke();
 }
@@ -436,7 +410,7 @@ function getCenter() {
 
 window.addEventListener('keydown', function(e) {
   switch(e.keyCode) {//e.key is too national
-    case 32: //space
+    case 72: //H
       toggleShow();
       if(toggle_show) {
         window.cachebreaker++;
