@@ -11,7 +11,7 @@
 // @grant        none
 // ==/UserScript==
 
-var baseTemplateUrl = 'https://raw.githubusercontent.com/Ev3rTonAllakbar/VoidZil_MiniMap/master/images/';
+var baseTemplateUrl = 'https://raw.githubusercontent.com/Ev3rTonAllakbar/VoidZil_MiniMap/tree/master/images/';
 var vers = "VoiZil Minimap";
 var range = 50
 
